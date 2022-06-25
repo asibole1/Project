@@ -1,13 +1,17 @@
-/* header css */
-body {
+/* entire page css */
+*{
   font-family: Arial, Helvetica, sans-serif;
 }
-nav>li {
-  float:left;
+p{
+  font-size:14pt;
 }
-nav>li.dropdown {
-  display: inline-block;
+.maincontent {
+  width:80%;
+  margin-left:auto;
+  margin-right:auto;
 }
+
+/* header css */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -15,6 +19,7 @@ nav>li.dropdown {
 .dropdown-content a {
   display: block;
   padding:5px;
+  color:white;
 }
 .dropdown:hover .dropdown-content {
   display: block;
@@ -32,22 +37,58 @@ nav > ul {
   padding-left:20%;
   padding-right:20%;
 }
-.navbar,
-.navbar a:link,
-a:visited {
-  text-decoration: none;
-  color: white;
-  font-weight: bolder;
-}
-nav {
+
+nav, .navbar a{
   background-color: #ef7c8e;
   padding: 10px;
   align-content:center;
+  color:white;
+  font-weight:bolder;
+  text-decoration: none;
+  font-size: 22px;
 }
 .logo {
   display: block;
-  width: 200px;
+  width: 300px;
   margin-right: auto;
   margin-left: auto;
   padding-bottom: 10px;
+}
+
+/* button */
+.yellowbutton{
+  display:flex;
+  width:fit-content;
+  align-items:center;
+  justify-content:center;
+  background-color:#FEEDAA;
+  color:black;
+  padding:5px;
+  text-decoration:none;
+  margin:5px;
+  font-weight:bold;
+  border-radius: 10%;
+  font-size: 16pt;
+}
+
+/* footer */
+footer{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  padding:15px;
+  background-color:#616D69;
+  margin-top:50px;
+  color:white;
+  align-items:top;
+  align-items:baseline;
+}
+footer a{
+color:white;
+text-decoration:none;
+}
+footer h2{
+  text-decoration:underline;
+}
+footer li{
+  font-size:14pt;
 }
