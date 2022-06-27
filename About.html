@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alicia's Cookbook - Home</title>
-    <link rel="stylesheet" href="general.css" />
-    <style></style>
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alicia's Cookbook - About</title>
+  <link rel="stylesheet" href="general.css" />
+  <link rel="icon" href="images/alicia's cookbook.png">
+
+  <style>
+    img {
+      width: 200px;
+    }
+
+    a {
+      color: black;
+    }
+
+    li {
+      font-size: 14pt;
+    }
+  </style>
+</head>
+
+<body>
   <!-- begin header -->
   <img class="logo" src="images/alicia's cookbook.png" alt="aliciacookbooklogo" />
   <nav class="navbar">
@@ -16,41 +32,68 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="/About.html">About</a></li>
       <li><a href="/Reference.html">Reference</a></li>
-      <li class="dropdown">
-        <a href="recipes.html" class="dropbtn">Recipes</a>
-        <div class="dropdown-content">
-          <a href="breakfast.html">Breakfast</a>
-          <a href="lunch.html">Lunch</a>
-          <a href="dinner.html">Dinner</a>
-          <a href="snacks.html">Dessert/Snack</a>
-        </div>
-      </li>
+      <li><a href="recipes.html" class="dropbtn">Recipes</a></li>
     </ul>
   </nav>
-<!-- end header -->
-<div class="maincontent">
-  <h1>About</h1>
-</div>
-<!-- begin footer -->
-    <footer>
-      <div>
-        <h2>Contact us:</h2>
-        <p><a href="mailto:aliciasibole@gmail.com">aliciasibole@gmail.com</a></p>
-        <p>#: 928-300-4957</p>
-      </div>
-      <div>
-        <h2>Follow on Social:</h2>
-        <p>Instagram: <a href="instagram.com/alicia.sibole">@alicia.sibole</a></p>
-        <p>Pinterest: <a href="https://www.pinterest.com/alicialifetips/">Alicia's Life Tips</a></p>
-      </div>
-      <div>
-        <h2>Explore the Site:</h2>
-        <li><a href="breakfast.html">Breakfast</a></li>
-        <li><a href="lunch.html">Lunch</a></li>
-        <li><a href="dinner.html">Dinner</a></li>
-        <li><a href="snacks.html">Dessert/Snack</a></li>
-      </div>
-    </footer>
-    <!-- end footer -->
-  </body>
+  <!-- end header -->
+  <div class="maincontent">
+    <h1>About</h1>
+    <p>This website has been created for a project in WebTech at Babson College. For this project, I've utilized what
+      I've learned in terms of HTML and CSS to create my own recipe site, where I share various recipes that I enjoy
+      making for breakfast, lunch, dinner, snacks, and desserts. Each recipe includes any backstory I have on each
+      recipe (ie who I
+      got it from or my experiences with it) as well as the ingredients and instructions needed to prepare it.</p>
+    <img id="selfie" src="images/alicia&christian.jpg" alt="selfie of alicia and christian at the lake">
+    <h3>What is the objective of the website?</h3>
+    <p>This summer, I am living with my partner and we have been enjoying grocery shopping, meal prepping, and cooking
+      new foods together. Every week, we come together to decide on our meals for the next week, and it would be very
+      helpful to have somewhere to keep all of our recipes for reference when meal planning. It will also be
+      a really fun way to document our adventures cooking together, in addition to its practical function.</p>
+    <h3>Who is your target audience?</h3>
+    <p>The primary audience for this website is myself and my partner, Christian. We will be using this site weekly to
+      determine our
+      meals. But, I often talk with friends about what I cook or post it on social media, so I can also direct people
+      to this site when they inquire on how to cook a certain dish.</p>
+    <img id="lunchpic" src="images/lunchpic.jpg" alt="delicious lunch">
+    <p>
+    <h3>This website includes the following:</h3>
+    <ol>
+      <li> <a href="index.html">Homepage:</a> a quick overview of the purpose of the site, along with some aesthetic
+        images of the food we've
+        made.</li>
+      <li> <a href="recipes.html">Recipes (AKA Sitemap):</a> a directory for all pages</li>
+      <li>Recipes Pages: each page will have a list of categories including individual recipes that fit under that
+        category. I will create at least one per cateogry by the project deadline.</li>
+      <ul>
+        <li> <a href="recipes.html">Breakfast Recipes</a></li>
+        <li> <a href="recipes.html">Lunch Recipes</a></li>
+        <li> <a href="recipes.html">Dinner Recipes</a></li>
+        <li> <a href="recipes.html">Desserts & Snacks</a></li>
+      </ul>
+      <li><a href="reference.html">Quick Reference Page:</a> includes things I may forget that would be helpful in making recipes, like conversions,
+        general rules, substitute products, etc.</li>
+    </ol>
+    </p>
+  </div>
+  <!-- begin footer -->
+  <footer>
+    <div>
+      <h2>Contact us:</h2>
+      <p><a href="mailto:aliciasibole@gmail.com">aliciasibole@gmail.com</a></p>
+      <p>#: 928-300-4957</p>
+      <p> <a href="contact.html">Submit a Question</a></p>
+    </div>
+    <div>
+      <h2>Follow on Social:</h2>
+      <p>Instagram: <a href="https://www.instagram.com/alicia.sibole/">@alicia.sibole</a></p>
+      <p>Pinterest: <a href="https://www.pinterest.com/alicialifetips/">Alicia's Life Tips</a></p>
+    </div>
+    <div>
+      <h2>Explore the Site:</h2>
+      <p><a href="recipes.html">Full Sitemap</a></p>
+    </div>
+  </footer>
+  <!-- end footer -->
+</body>
+
 </html>

@@ -1,14 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alicia's Cookbook - Home</title>
-    <link rel="stylesheet" href="general.css" />
-    <style></style>
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alicia's Cookbook - Home</title>
+  <link rel="stylesheet" href="general.css" />
+  <link rel="icon" href="images/alicia's cookbook.png">
+  <style>
+    #recipecolumns {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+    }
+
+    li {
+      font-size: 14pt;
+    }
+
+    h3 {
+      background-color: #EF7C8E;
+      padding: 10px;
+      margin-left: 2px;
+      margin-right: 2px;
+    }
+
+    .col ul {
+      background-color: #FAE8E0;
+      padding: 10px;
+      margin-left: 2px;
+      margin-right: 2px;
+    }
+
+    .col li {
+      margin-left: 20px;
+    }
+
+    .col a {
+      color: black;
+      text-decoration: none;
+    }
+
+    a {
+      color: #EF7C8E;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
   <!-- begin header -->
   <img class="logo" src="images/alicia's cookbook.png" alt="aliciacookbooklogo" />
   <nav class="navbar">
@@ -16,41 +57,69 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="/About.html">About</a></li>
       <li><a href="/Reference.html">Reference</a></li>
-      <li class="dropdown">
-        <a href="recipes.html" class="dropbtn">Recipes</a>
-        <div class="dropdown-content">
-          <a href="breakfast.html">Breakfast</a>
-          <a href="lunch.html">Lunch</a>
-          <a href="dinner.html">Dinner</a>
-          <a href="snacks.html">Dessert/Snack</a>
-        </div>
-      </li>
+      <li><a href="recipes.html" class="dropbtn">Recipes</a></li>
     </ul>
   </nav>
   <!-- end header -->
   <div class="maincontent">
-    <h1>All Recipes</h1>
+    <h1>Before you start cooking...</h1>
+    <h2>Check out some introductory tools and information:</h2>
+    <ul>
+      <li><a href="about.html">About this Website</a></li>
+      <li><a href="reference.html">Quick Reference For Meal Prep</a></li>
+    </ul>
+    <h1>See All Recipes</h1>
+    <div id="recipecolumns">
+      <div class="col">
+        <h3>Breakfast Meals</h3>
+        <ul>
+          <li><a href="recipes/breakfast-sandwich.html">Breakfast Sandwiches</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h3>Lunch Meals</h3>
+        <ul>
+          <li><a href="recipes/chickpea-salad.html">Chickpea Salad</a></li>
+        </ul>
+      </div>
+
+      <div class="col">
+        <h3>Dinner Meals</h3>
+        <ul>
+          <li><a href="recipes/fried-lemon-pepper-chicken.html">Lemon Pepper Fried Chicken</a></li>
+        </ul>
+      </div>
+
+      <div class="col">
+        <h3>Dessert & Snack Foods</h3>
+        <ul>
+          <li><a href="recipes/mini-cheesecakes.html">Mini Cheesecakes</a></li>
+        </ul>
+      </div>
+    </div>
+    <h1>Didn't find what you're looking for?</h1>
+    <p><a href="contact.html">Submit a Question Here</a></p>
   </div>
   <!-- begin footer -->
-    <footer>
-      <div>
-        <h2>Contact us:</h2>
-        <p><a href="mailto:aliciasibole@gmail.com">aliciasibole@gmail.com</a></p>
-        <p>#: 928-300-4957</p>
-      </div>
-      <div>
-        <h2>Follow on Social:</h2>
-        <p>Instagram: <a href="instagram.com/alicia.sibole">@alicia.sibole</a></p>
-        <p>Pinterest: <a href="https://www.pinterest.com/alicialifetips/">Alicia's Life Tips</a></p>
-      </div>
-      <div>
-        <h2>Explore the Site:</h2>
-        <li><a href="breakfast.html">Breakfast</a></li>
-        <li><a href="lunch.html">Lunch</a></li>
-        <li><a href="dinner.html">Dinner</a></li>
-        <li><a href="snacks.html">Dessert/Snack</a></li>
-      </div>
-    </footer>
+  <footer>
+    <div>
+      <h2>Contact us:</h2>
+      <p><a href="mailto:aliciasibole@gmail.com">aliciasibole@gmail.com</a></p>
+      <p>#: 928-300-4957</p>
+      <p> <a href="contact.html">Submit a Question</a></p>
+
+    </div>
+    <div>
+      <h2>Follow on Social:</h2>
+      <p>Instagram: <a href="https://www.instagram.com/alicia.sibole/">@alicia.sibole</a></p>
+      <p>Pinterest: <a href="https://www.pinterest.com/alicialifetips/">Alicia's Life Tips</a></p>
+    </div>
+    <div>
+      <h2>Explore the Site:</h2>
+      <p><a href="recipes.html">Full Sitemap</a></p>
+    </div>
+  </footer>
   <!-- end footer -->
-    </body>
+</body>
+
 </html>
