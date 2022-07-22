@@ -16,20 +16,20 @@ nav > ul {
   list-style-type: none;
   justify-content: space-around;
   list-style-type: none;
-  padding: 0;
-  display: flex;
-  padding-left:20%;
-  padding-right:20%;
+  display: inline-flex;
+  width:90%;
 }
 
 nav, .navbar a{
   background-color: #ef7c8e;
-  padding: 10px;
+  padding-top:2px;
+  padding-bottom:2px;
   align-content:center;
   color:white;
   font-weight:bolder;
   text-decoration: none;
-  font-size: 22px;
+  font-size: 20px;
+  width:100%;
 }
 .logo {
   display: block;
@@ -57,13 +57,14 @@ nav, .navbar a{
 
 /* footer */
 footer{
-  display:grid;
+  display:inline-flex;
+  justify-content:space-around;
+  flex-wrap:wrap;
+  width:100%;
   grid-template-columns:1fr 1fr 1fr;
-  padding:15px;
   background-color:#616D69;
-  margin-top:50px;
+  margin-top:20px;
   color:white;
-  align-items:top;
   align-items:baseline;
 }
 footer a{
@@ -72,7 +73,4 @@ text-decoration:none;
 }
 footer h2{
   text-decoration:underline;
-}
-footer li{
-  font-size:14pt;
 }

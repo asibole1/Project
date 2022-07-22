@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!-- NOTE: this webpage is mobile compatable -->
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -43,7 +43,7 @@
       making for breakfast, lunch, dinner, snacks, and desserts. Each recipe includes any backstory I have on each
       recipe (ie who I
       got it from or my experiences with it) as well as the ingredients and instructions needed to prepare it.</p>
-    <img id="selfie" src="images/alicia&christian.jpg" alt="selfie of alicia and christian at the lake">
+    <img id="selfie" src="#" alt="selfie of alicia and christian at the lake">
     <h3>What is the objective of the website?</h3>
     <p>This summer, I am living with my partner and we have been enjoying grocery shopping, meal prepping, and cooking
       new foods together. Every week, we come together to decide on our meals for the next week, and it would be very
@@ -70,7 +70,8 @@
         <li> <a href="recipes.html">Dinner Recipes</a></li>
         <li> <a href="recipes.html">Desserts & Snacks</a></li>
       </ul>
-      <li><a href="reference.html">Quick Reference Page:</a> includes things I may forget that would be helpful in making recipes, like conversions,
+      <li><a href="reference.html">Quick Reference Page:</a> includes things I may forget that would be helpful in
+        making recipes, like conversions,
         general rules, substitute products, etc.</li>
     </ol>
     </p>
@@ -94,6 +95,29 @@
     </div>
   </footer>
   <!-- end footer -->
+  <script>
+    // the following code is the optional slideshow element 
+    const slides = [
+      "images/selfie1.jpg",
+      "images/selfie2.jpg",
+      "images/selfie3.jpg",
+    ];
+    let i = 0;
+
+    function slideShow() {
+      const cuteImage = document.getElementById("selfie");
+      if (i === slides.length) {
+        i = 0
+      }
+      cuteImage.src = slides[i]; i++;
+
+      setTimeout(slideShow, 2000);
+    }
+    document.querySelector("body").onload = function () {
+      slideShow();
+    };
+
+  </script>
 </body>
 
 </html>

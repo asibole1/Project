@@ -10,9 +10,7 @@
   <link rel="icon" href="images/alicia-cookbook.png">
   <style>
     #recipecolumns {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1fr;
+      display: flexbox;
     }
 
     li {
@@ -46,6 +44,20 @@
       color: #EF7C8E;
       text-decoration: none;
     }
+    #popup {
+        display: none;
+        position:fixed;
+        top:30%;
+        left:25%;
+        width: 50%;
+        padding: 30px;
+        justify-content: center;
+        color: black;
+        background-color: #B6E2D3;
+        font-weight: bold;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        /* source for shadow: https://getcssscan.com/css-box-shadow-examples */
+      }
   </style>
 </head>
 
@@ -61,6 +73,16 @@
     </ul>
   </nav>
   <!-- end header -->
+  <div id="popup">
+    <p>
+      Want to know when we add more recipes? Add your email below and we'll let you know!
+    </p>
+    <form action="">
+      <p>Email: <input type="email" /></p>
+      <p><button class="yellowbutton">Submit</button></p>
+      <p><button class="yellowbutton" id="exitPopup">No Thanks</button></p>
+    </form>
+  </div>
   <div class="maincontent">
     <h1>Before you start cooking...</h1>
     <h2>Check out some introductory tools and information:</h2>
@@ -120,6 +142,20 @@
     </div>
   </footer>
   <!-- end footer -->
-</body>
+  <script>
+    //the below code is intended to be the "add some other functionalities" requirement
+      function displayPopup() {
+        console.log("working");
+        document.getElementById("popup").style.display = "block";
+      }
+      window.onscroll = displayPopup;
 
+      function exitPopup(){
+        document.getElementById("popup").style.display = "none";
+      }
+      document.getElementById("exitPopup").onclick = function(){
+        exitPopup();
+      }
+  </script>
+</body>
 </html>

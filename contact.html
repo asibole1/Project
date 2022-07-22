@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alicia's Cookbook - Home</title>
-    <link rel="stylesheet" href="general.css" />
-    <link rel="icon" href="images/alicia-cookbook.png">
 
-    <style>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alicia's Cookbook - Home</title>
+  <link rel="stylesheet" href="general.css" />
+  <link rel="icon" href="images/alicia-cookbook.png">
+
+  <style>
     .contact-form {
-            background-color: #B6E2D3;
-            width: 30%;
-            border-radius:5%;
-            padding: 20px
-        }
-    input, textarea{
-      width:80%;
+      background-color: #B6E2D3;
+      width: 30%;
+      border-radius: 5%;
+      padding: 20px
     }
-    </style>
-  </head>
-  <body>
+
+    input,
+    textarea {
+      width: 80%;
+    }
+  </style>
+</head>
+
+<body>
   <!-- begin header -->
   <img class="logo" src="images/alicia-cookbook.png" alt="aliciacookbooklogo" />
   <nav class="navbar">
@@ -35,38 +39,65 @@
   <div class="maincontent">
     <h1 id-="contact-form">Got a Question?</h1>
     <p>Go ahead and submit your question below and we'll get back to you ASAP!</p>
-    <form class="contact-form" method="post" action="https://oim-apis.herokuapp.com/form2" onsubmit="">
+    <form name="myForm" class="contact-form" method="post" action="https://oim-apis.herokuapp.com/form2" onsubmit="return validateForm()">
       <p>
         Name:
-        <input type="text" name="first"/>
+        <input type="text" name="first" id="first" />
       </p>
       <p>
-        Email: <input type="email" name="email"/>
+        Email: <input type="email" name="email" id="email" />
       </p>
-      <p>Inquiry: <p><textarea name="question" id="question" rows="10"></textarea></p></p>
+      <p>Inquiry:
+      <p><textarea name="question" id="question" rows="10"></textarea></p>
+      </p>
       <button class="yellowbutton" type="submit">Submit</button>
 
     </form>
   </div>
   <!-- begin footer -->
-    <footer>
-      <div>
-        <h2>Contact us:</h2>
-        <p><a href="mailto:aliciasibole@gmail.com">aliciasibole@gmail.com</a></p>
-        <p>#: 928-300-4957</p>
-        <p> <a href="contact.html">Submit a Question</a></p>
+  <footer>
+    <div>
+      <h2>Contact us:</h2>
+      <p><a href="mailto:aliciasibole@gmail.com">aliciasibole@gmail.com</a></p>
+      <p>#: 928-300-4957</p>
+      <p> <a href="contact.html">Submit a Question</a></p>
 
-      </div>
-      <div>
-        <h2>Follow on Social:</h2>
-        <p>Instagram: <a href="https://www.instagram.com/alicia.sibole/">@alicia.sibole</a></p>
-        <p>Pinterest: <a href="https://www.pinterest.com/alicialifetips/">Alicia's Life Tips</a></p>
-      </div>
-      <div>
-        <h2>Explore the Site:</h2>
-        <p><a href="recipes.html">Full Sitemap</a></p>
-      </div>
-    </footer>
+    </div>
+    <div>
+      <h2>Follow on Social:</h2>
+      <p>Instagram: <a href="https://www.instagram.com/alicia.sibole/">@alicia.sibole</a></p>
+      <p>Pinterest: <a href="https://www.pinterest.com/alicialifetips/">Alicia's Life Tips</a></p>
+    </div>
+    <div>
+      <h2>Explore the Site:</h2>
+      <p><a href="recipes.html">Full Sitemap</a></p>
+    </div>
+  </footer>
   <!-- end footer -->
-    </body>
+  <script>
+    //the following code is for the requirement "validate a form"
+    function validateForm() {
+      let n = document.forms["myForm"]["first"].value;
+      if (n == "") {
+        alert("Name must be filled out");
+        document.getElementById("first").style.backgroundColor = "#FAE8E0";
+        return false;
+      }
+      let e = document.forms["myForm"]["email"].value;
+      if(e == "") {
+        alert("Email must be filled out");
+        document.getElementById("email").style.backgroundColor = "#FAE8E0";
+        return false;
+      }
+      let q = document.forms["myForm"]["question"].value;
+      if(q == "") {
+        alert("You forgot to type a message!");
+        document.getElementById("question").style.backgroundColor = "#FAE8E0";
+        return false;
+      }
+    }
+    //note that I used this resource as a starting place for this code: https://www.w3schools.com/js/js_validation.asp
+  </script>
+</body>
+
 </html>

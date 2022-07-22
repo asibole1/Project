@@ -29,8 +29,15 @@
       text-align: center;
       text-decoration: none;
     }
-    .table img{
-      width:100%;
+
+    .table img {
+      width: 100%;
+    }
+
+    .description {
+      display: none;
+      font-size: 14pt;
+      color: #ef7c8e;
     }
   </style>
 </head>
@@ -62,24 +69,37 @@
     <p>In general, these meals require low-levels of skill and equipment. You should be able to make most of the dishes
       within an hour.</p>
     <p>We hope you enjoy the recipes as much as we do!</p>
-    <a class="yellowbutton" href="/About.html">Learn more</a>
+    <a id="learnmorebtn" class="yellowbutton" href="/About.html">Learn more</a>
     <h1>Browse our Recipes</h1>
     <table class="table">
       <tr>
-        <td><img src="images/breakfastsandwich.png" alt="breakfast image"></td>
-        <td><img src="images/chickpeasalad.png" alt="lunch image"></td>
+        <td><img id="breakfastImg" src="images/breakfastsandwich.png" alt="breakfast image"></td>
+        <td><img id="lunchImg" src="images/chickpeasalad.png" alt="lunch image"></td>
       </tr>
       <tr>
-        <td><a href="recipes.html">Breakfast</a></td>
-        <td><a href="recipes.html">Lunch</a></td>
+        <td id="breakfastCategory"><a href="recipes.html">Breakfast</a>
+          <div id="breakfastDescription" class="description">Breakfast has always been one of my favorite meals to cook.
+            My mom was great at it. Explore my breakfast favorites here!</div>
+        </td>
+        <td id="lunchCategory"><a href="recipes.html">Lunch</a>
+          <div id="lunchDescription" class="description">Who doesn't love a good lunch break? I certainly do. Check out
+            these easy, morning-preppable recipes here.</div>
+        </td>
+
       <tr>
       </tr>
-      <td><img src="images/friedchicken.png" alt="dinner image"></td>
-      <td><img src="images/minicheesecakes.png" alt="dessert image"></td>
+      <td><img id="dinnerImg" src="images/friedchicken.png" alt="dinner image"></td>
+      <td><img id="snackImg" src="images/minicheesecakes.png" alt="dessert image"></td>
       </tr>
       <tr>
-        <td><a href="recipes.html">Dinner</a></td>
-        <td><a href="recipes.html">Snacks & Dessert</a></td>
+        <td id="dinnerCategory"><a href="recipes.html">Dinner</a>
+          <div id="dinnerDescription" class="description">All my dinner recipes are beginner-friendly and budget
+            friendly. Click to discover the yumminess.</div>
+        </td>
+        <td id="snackCategory"><a href="recipes.html">Snacks & Dessert</a>
+          <div id="snackDescription" class="description">No enticing description needed. Just go make them. All beginner
+            friendly. :)</div>
+        </td>
       </tr>
     </table>
     <a class="yellowbutton" href="recipes.html">Browse all</a>
@@ -112,6 +132,73 @@
     </div>
   </footer>
   <!-- end footer -->
+  <script>
+    //below is the requirement of changing a style in response to a user's action
+    let btnEl = document.querySelector('.yellowbutton');
+
+    function highlightBtn(){
+      console.log("highlighting...")
+      btnEl.style.backgroundColor = "#EF7C8E";
+    }
+    function offBtn(){
+      btnEl.style.backgroundColor = "#FEEDAA";
+    }
+    btnEl.addEventListener('mouseover',highlightBtn);
+    btnEl.addEventListener('mouseout',offBtn);
+    //below are the javascript requirements for "change text in response to user's action" AND "change images"
+    let breakfastEl = document.getElementById("breakfastCategory");
+
+    function changeBreakfast() {
+      document.getElementById("breakfastDescription").style.display = "block";
+      document.getElementById("breakfastImg").src = "images/breakfastpic2.png";
+    }
+    function changeBreakfastBack() {
+      document.getElementById("breakfastDescription").style.display = "none";
+      document.getElementById("breakfastImg").src = "images/breakfastsandwich.png";
+    }
+    breakfastEl.addEventListener('mouseover', changeBreakfast);
+    breakfastEl.addEventListener('mouseout', changeBreakfastBack);
+
+    let lunchEl = document.getElementById("lunchCategory");
+
+    function changeLunch() {
+      document.getElementById("lunchDescription").style.display = "block";
+      document.getElementById("lunchImg").src = "images/lunchpic2.png";
+    }
+    function changeLunchBack() {
+      document.getElementById("lunchDescription").style.display = "none";
+      document.getElementById("lunchImg").src = "images/chickpeasalad.png";
+    }
+    lunchEl.addEventListener('mouseover', changeLunch);
+    lunchEl.addEventListener('mouseout', changeLunchBack);
+
+    let dinnerEl = document.getElementById("dinnerCategory");
+    function changeDinner() {
+      document.getElementById("dinnerDescription").style.display = "block";
+      document.getElementById("dinnerImg").src = "images/dinnerpic2.png";
+    }
+    function changeDinnerBack() {
+      document.getElementById("dinnerDescription").style.display = "none";
+      document.getElementById("dinnerImg").src = "images/friedchicken.png";
+    }
+    dinnerEl.addEventListener('mouseover', changeDinner);
+    dinnerEl.addEventListener('mouseout', changeDinnerBack);
+
+    let snackEl = document.getElementById("snackCategory");
+
+    function changeSnack() {
+      document.getElementById("snackDescription").style.display = "block";
+      document.getElementById("snackImg").src = "images/dessertpic2.png";
+    }
+    function changeSnackBack() {
+      document.getElementById("snackDescription").style.display = "none";
+      document.getElementById("snackImg").src = "images/minicheesecakes.png";
+    }
+    snackEl.addEventListener('mouseover', changeSnack);
+    snackEl.addEventListener('mouseout', changeSnackBack);
+
+
+  </script>
 </body>
 
 </html>
